@@ -682,7 +682,7 @@ ul {
 #menu-icon .animation,
 .home.show-animation .animation {
     animation: showRight 1s ease forwards;
-    animation-delay: calc(.3s * var(--i));
+    animation-delay: calc(.1s * var(--i));
 }
 
 @keyframes showRight {
