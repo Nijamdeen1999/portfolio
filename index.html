@@ -199,14 +199,14 @@ analyzing data.
      <!-- contact section design -->
       <section class="contact" id="contact">
         <h2 class="heading">Contact <span class="span">Me!</span><span class="animation scroll" style="--i:1;"></span></h2>
-        <form action="#">
+        <form action="https://formsubmit.co/s.nijamdeeen@gmail.com" method="POST" onsubmit="formSent();" target="hidden_iframe">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Full Name" name="Name" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
+                    <input type="text" placeholder="Email Address" name="Mail_ID" required>
                     <span class="focus"></span>
                 </div>
                 <span class="animation scroll" style="--i:3;"></span>
@@ -214,18 +214,18 @@ analyzing data.
 
              <div class="input-box">
                 <div class="input-field">
-                    <input type="Number" placeholder="Mobile Number" required>
+                    <input type="Number" placeholder="Mobile Number" name="Phone_No" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Subjet" required>
+                    <input type="text" placeholder="Email Subjet" name="Mail_Subject" required>
                     <span class="focus"></span>
                 </div>
                 <span class="animation scroll" style="--i:3;"></span>
              </div>
 
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Youe Message" required></textarea>
+                <textarea name="Your_Message" id="" cols="30" rows="10" placeholder="Youe Message" required></textarea>
                 <span class="focus"></span>
                 <span class="animation scroll" style="--i:5;"></span>
             </div>
@@ -236,6 +236,19 @@ analyzing data.
             </div>
 
         </form>
+
+        <!-- Prevent page navigation on submit -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+        <script>
+            function formSent() {
+                // Optional: show a toast/alert, then reset:
+                alert("✅ Thanks! Your message was sent.");
+                setTimeout(() => {
+                document.querySelector('form').reset();
+                }, 200);
+            }
+        </script>
 
        
 
